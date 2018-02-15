@@ -1,6 +1,6 @@
 buildscript {
     repositories {
-        maven { url 'https://maven.fabric.io/repo' }
+        maven { url 'https://maven.fabric.io/public' }
     }
 
     dependencies {
@@ -12,7 +12,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'io.fabric'
 
 repositories {
-    maven { url 'https://maven.fabric.io/repo' }
+    maven { url 'https://maven.fabric.io/public' }
 }
 
 
@@ -40,6 +40,7 @@ android {
             proguardFile 'proguard-rules.pro'
         }
     }
+    buildToolsVersion '26.0.2'
 }
 
 dependencies {
@@ -51,6 +52,7 @@ dependencies {
 
     compile 'com.github.castorflex.smoothprogressbar:library-circular:1.1.0'
     compile 'com.jakewharton:butterknife:7.0.1'
+    annotationProcessor 'com.jakewharton:butterknife:7.0.1'
     compile 'com.squareup:android-times-square:1.6.4@aar'
     compile 'org.jsoup:jsoup:1.8.3'
     compile 'com.jpardogo.materialtabstrip:library:1.1.0'
